@@ -14,5 +14,5 @@ python ./app.py
 ### How to pas URL - Temporary after furthermore implementations will be dynamic.
 
 - Direct to safe_masks_crawler
-- cat or open file alibaba_module.py
-- Line 57 - Change the URL.
+- cat or open file app.py
+- Line 6 - Change the URL.
