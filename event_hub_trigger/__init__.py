@@ -1,7 +1,7 @@
 import logging
 
 import azure.functions as func
-from safe_masks_crawler import alibaba_module
+
 
 
 def main(event: func.EventHubEvent):
