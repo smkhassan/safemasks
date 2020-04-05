@@ -26,8 +26,14 @@ wheels/
 *.egg
 
 # virtualenv
+.funcignore
+IaC
 .venv
+safe_masks.code-workspace
+local.settings.json
+host.json
 myvirtualenv
+proxies.json
 ENV/
 .vscode
 Sixerr.code-workspace

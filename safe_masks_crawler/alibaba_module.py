@@ -13,6 +13,10 @@ from selenium.common.exceptions import NoSuchElementException
 
 class crawler:
 
+    def init(url):
+        self.url = str(url)
+
+
     #chooses PROXY AFTER EACH OTHER
     def randomproxy():
         file = open("./bin/proxy.txt")
@@ -34,7 +38,7 @@ class crawler:
             os.execv(sys.executable, ['python'] + sys.argv)   
     ###################################################################################################         
 
-    def crawl():
+    def crawl(url):
         #print("We are now using this proxy:" + randomproxy())
 
         chrome_option = webdriver.ChromeOptions()
@@ -55,7 +59,7 @@ class crawler:
         ###################################################################################################
 
         ##url passed 
-        browser.get("https://www.alibaba.com/product-detail/5Layers-Multifunctional-Face-Masks-KN95-Respirator_62532136916.html?spm=a2700.galleryofferlist.0.0.125c66d3DbeLJk&s=p")
+        browser.get(url)
         ###################################################################################################
 
 

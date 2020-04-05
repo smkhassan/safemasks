@@ -5,7 +5,7 @@ The application crawls into URL provided by Event Hub's Event.
 
 
 
-### How to run
+### How to run locally
 
 python ./app.py
 
