@@ -2,7 +2,7 @@
   "scriptFile": "__init__.py",
   "bindings": [
     {
-      "type": "eventHubTrigger",
+      "type": "event_hub_trigger",
       "name": "event",
       "direction": "in",
       "eventHubName": "mainfeed",
