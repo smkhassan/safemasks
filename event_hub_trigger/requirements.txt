@@ -1,5 +1,0 @@
-azure-functions
-EasyProcess==0.2.10
-PyVirtualDisplay==0.2.5
-selenium==3.141.0
-urllib3==1.25.8
