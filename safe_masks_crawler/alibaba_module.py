@@ -13,9 +13,11 @@ from selenium.common.exceptions import NoSuchElementException
 
 class crawler:
 
-    def init(url):
-        self.url = str(url)
 
+    def init(self,url,manufacturer_name,picture_url):
+        self.url = str(url)
+        self.manufacturer_name = str(manufacturer_name)
+        self.picture_url = str(picture_url)
 
     #chooses PROXY AFTER EACH OTHER
     def randomproxy():
@@ -36,7 +38,7 @@ class crawler:
             print('Error found! , aborted!')
             browser.quit()
             os.execv(sys.executable, ['python'] + sys.argv)   
-    ###################################################################################################         
+    ###################################################################################################        
 
     def crawl(url):
         #print("We are now using this proxy:" + randomproxy())
@@ -74,13 +76,14 @@ class crawler:
         #Saves the picture url of product into variable picture_url 
         picture_field = browser.find_element_by_xpath('/html/body/div[2]/div/div/div[3]/div[1]/div[1]/div[3]/div/div[1]/div/div[2]/div[1]/div/a/img')
         picture_url = picture_field.get_attribute('src')
-        print(picture_url)
         ##################################################################################################
         time.sleep(2) #time.sleep count can be changed depending on the Internet speed.
 
         ##Saves the name of the manufacturer into variable manufacturer_name
         manufacturer_field = browser.find_element_by_xpath('//*[@id="shopping-ads"]/div[2]/div/div/div[1]/div/div/div[2]/div[2]/a')
         manufacturer_name = manufacturer_field.get_attribute('title')
-        print(manufacturer_name)
         ##################################################################################################
-        time.sleep(2) #time.sleep count can be changed depending on the Internet speed.        
+        time.sleep(2) #time.sleep count can be changed depending on the Internet speed. 
+    
+
+        return (manufacturer_name,picture_url)
